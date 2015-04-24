@@ -42,10 +42,10 @@
 
     $(document).ready( function() {
       $(input).after('<br>', $canvas, '<br>', $reset);
-      $reset.click(reset);
-      $canvas.on('mousedown', mousedown);
-      $canvas.on('contextmenu', rightclick);
-      $canvas.on('mouseup', stopdrag);
+      $(document).find($reset).click(reset);
+      $(document).find($canvas).on('mousedown', mousedown);
+      $(document).find($canvas).on('contextmenu', rightclick);
+      $(document).find($canvas).on('mouseup', stopdrag);
     });
 
     reset = function() {
